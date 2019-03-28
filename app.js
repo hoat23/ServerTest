@@ -1,30 +1,25 @@
+var express = require('express');
+var bodyparser = require('body-parser')
+var app = express().use(bodyparser.json()) //http server
+var port = 3009
 
-var connect = require('connect');
-var http = require('http');
-var debug = require('debug')('wh');
-var app = connect();
-var format = function (input) { return JSON.stringify(input, null, 2); };
-var port = 3009;
+app.get('/', (req,res) => {
+    console.log("[INFO] Event GET")
+    console.log("Printing request")
+    console.log(req.query)
+    console.log("Printing response")
+    console.log(res.query)
+    res.status(200).send('OK')
+})
 
-// Parse JSON requests into `req.body`.
-var bodyParser = require('body-parser');
-app.use(bodyParser.json());
+app.post('/', (req,res) => {
+    console.log("[INFO] Event POST")
+    console.log("Printing request")
+    console.log(req.query)
+    console.log("Printing response")
+    console.log(res.query)
+    res.status(200).send('OK')
+})
 
-// Print all incoming requests, then respond to them.
-app.use(function (req, res) {
-    console.log("incomming webhook");
-    debug('incoming webhook', req.method, req.url, format(req.body));
-    res.end('OK\n');
-});
 
-// create node.js http server and listen on port 3009
-var server = http.createServer(app);
-server.on('error', function (err) {
-    console.log("error")
-    debug('server error', err);
-});
-server.listen(port, function () {
-    console.log("respond webhook server...")
-    debug('Respoke webhook server is listening on port', port);
-});
-
+app.listen(port, () => console.log('[INFO] Listening to elasticsearch on port 3200.'));
