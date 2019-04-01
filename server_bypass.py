@@ -14,22 +14,22 @@ def req_get(URL_API, data=None, timeout=None):
     try:
         headers =  {'Content-Type': 'application/json'}
         rpt = requests.get( url=URL_API, data=data, headers=headers, timeout=timeout)
-        print("{0} [INFO ] req_get |{1}|{2}|{3}|".format( datetime.datetime.utcnow().isoformat(), rpt.status_code, rpt.reason, URL_API))
+        print("{0} [INFO ] req_get |{1}|{2}|{3}|".format( datetime.utcnow().isoformat(), rpt.status_code, rpt.reason, URL_API))
         print(rpt.text)
         return rpt.text
     except:
-        print("{0} [ERROR] req_get |{1}|{2}|{3}|".format( datetime.datetime.utcnow().isoformat(), rpt.status_code, rpt.reason, URL_API))
+        print("{0} [ERROR] req_get |{1}|{2}|{3}|".format( datetime.utcnow().isoformat(), rpt.status_code, rpt.reason, URL_API))
         return ""
 #######################################################################################
 def req_post(URL_API, data=None, timeout=None):
     try:
         headers =  {'Content-Type': 'application/json'}
         rpt = requests.post( url=URL_API, data=None, headers=headers , timeout=timeout)
-        print("{0} [INFO ] req_post|{1}|{2}|{3}|".format( datetime.datetime.utcnow().isoformat(), rpt.status_code, rpt.reason, URL_API))
+        print("{0} [INFO ] req_post|{1}|{2}|{3}|".format( datetime.utcnow().isoformat(), rpt.status_code, rpt.reason, URL_API))
         print(rpt.text)
         return rpt.text
     except:
-        print("{0} [ERROR] req_post|{1}|{2}|{3}|".format( datetime.datetime.utcnow().isoformat(), rpt.status_code, rpt.reason, URL_API))
+        print("{0} [ERROR] req_post|{1}|{2}|{3}|".format( datetime.utcnow().isoformat(), rpt.status_code, rpt.reason, URL_API))
         return ""
 #######################################################################################
 def bytesELK2json(data,codification='utf-8'):
