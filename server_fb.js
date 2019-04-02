@@ -6,6 +6,7 @@ const
     bodyParser = require('body-parser'),
     crypto = require('crypto'),
     https = require('https'),
+    request = require('request'),
     app = express().use(bodyParser.json()); //Create express http server
 
 //Adding certificates LINK= https://sg.com.mx/revista/53/desarrollo-chatbots-para-facebook-messenger
@@ -85,15 +86,18 @@ function callSendAPI(sender_psid, response) {
     let datetime = new Date();
     console.log("%s|callSenderAPI",datetime.toISOString());
     let request_body = {
+        "messaging_type": "RESPONSE",
         "recipient": {
             "id": sender_psid
         },
-        "message": response
+        "message": {
+            "text": response
+        }
     }
     console.log(request_body);
-    // Send the HTTP request to the Messenger Platform
+    // Send the HTTP request to the Messenger Platform "https://graph.facebook.com/v2.6/me/messages"
     request({
-        "uri": "https://graph.facebook.com/v2.6/me/messages",
+        "uri": "https://graph.facebook.com/v3.2/me/messages",
         "qs": { "access_token": "" },
         "method": "POST",
         "json": request_body
