@@ -23,7 +23,8 @@ app.listen(process.env.PORT || 4006, ()=> console.log('[INFO] webhook facebook l
 /*                                                         HANDLES MESSAGES EVENTS                                                      /
 /***************************************************************************************************************************************/
 function handleMessage(sender_psid, received_message ) {
-    console.log("%s| handleMessage",datetime.toISOString());
+    let datetime = new Date();
+    console.log("%s|INFO | handleMessage",datetime.toISOString());
     let response;
     //Check if the message contains text
     if(received_message.text) {
@@ -65,7 +66,8 @@ function handleMessage(sender_psid, received_message ) {
 }
 /***************************************************************************************************************************************/
 function handlePostBack(sender_psid, received_postback) {
-    console.log("%s|shandlePostBack", datetime.toISOString());
+    let datetime = new Date();
+    console.log("%s|INFO | shandlePostBack", datetime.toISOString());
     let response;
     // Get the payload for the postback
     let payload = received_postback.payload;
@@ -80,6 +82,7 @@ function handlePostBack(sender_psid, received_postback) {
 }
 /***************************************************************************************************************************************/
 function callSendAPI(sender_psid, response) {
+    let datetime = new Date();
     console.log("%s|callSenderAPI",datetime.toISOString());
     let request_body = {
         "recipient": {
