@@ -2,12 +2,14 @@
 # Developer: Deiner Zapata Silva.
 # Date: 01/14/2019
 # Description: Server to show everything to received.
+# https://blog.nearsoftjobs.com/crear-un-api-y-una-aplicación-web-con-flask-6a76b8bf5383
 #########################################################################################
 import sys, requests, json, ast
 from utils import print_json
 from datetime import datetime, timedelta
 from flask import Flask, request, abort
 #######################################################################################
+URL = "http://209fe4c7.ngrok.io"
 app = Flask(__name__)
 #######################################################################################
 def req_get(URL_API, data=None, timeout=None):
@@ -45,7 +47,7 @@ def bytesELK2json(data,codification='utf-8'):
 #######################################################################################
 @app.route('/', methods=['POST'])
 def webhook_post():
-    URL = "http://1855b969.ngrok.io"
+    #URL = "http://1855b969.ngrok.io"
     print("webhook_post()-> "+ str(sys.stdout.flush()) )
     print_json( bytesELK2json( request.data ))
     rpt = req_post(URL, data = request.data, timeout=None)
@@ -53,7 +55,7 @@ def webhook_post():
 #######################################################################################
 @app.route('/', methods=['GET'])
 def webhook_get():
-    URL = "http://1855b969.ngrok.io"
+    #URL = "http://1855b969.ngrok.io"
     print("webhook_get()-> "+ str(sys.stdout.flush()) )
     print_json( bytesELK2json( request.data ))
     rpt = req_get(URL, data = request.data, timeout=None)
