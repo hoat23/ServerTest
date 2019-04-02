@@ -30,7 +30,7 @@ function handleMessage(sender_psid, received_message ) {
     if(received_message.text) {
         //Create the payload for a basic text message
         response = {
-            "text": 'Hola "{received_message.text}".'
+            "text": received_message.text
         }
     }else if(received_message.attachments){
         //Get url of the message attachmednt
@@ -91,6 +91,19 @@ function callSendAPI(sender_psid, response) {
         "message": response
     }
     console.log(request_body);
+    // Send the HTTP request to the Messenger Platform
+    request({
+        "uri": "https://graph.facebook.com/v2.6/me/messages",
+        "qs": { "access_token": "" },
+        "method": "POST",
+        "json": request_body
+    }, (err, res, body) => {
+        if (!err) {
+            console.log('message sent!')
+        } else {
+            console.error("Unable to send message:" + err);
+        }
+    });
 }
 /***************************************************************************************************************************************/
 app.post('/webhook', (req, res)=>{
