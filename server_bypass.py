@@ -1,6 +1,7 @@
 # coding: utf-8
 # Developer: Deiner Zapata Silva.
 # Date: 01/14/2019
+# Last update: 27/05/2019
 # Description: Server to show everything to received.
 # https://blog.nearsoftjobs.com/crear-un-api-y-una-aplicación-web-con-flask-6a76b8bf5383
 #########################################################################################
@@ -41,7 +42,9 @@ def bytesELK2json(data,codification='utf-8'):
         data = data.decode(codification)
 
     try:
-       data = data.replace("false","False")
+       d_str = d_str.replace("false","False")
+       d_str = d_str.replace("true","True")
+       d_str = d_str.replace("null","None")
        d_dict = eval(data)
     except:
        print("[ERROR] type={0} ".format( type(data) ))
