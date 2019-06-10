@@ -1,21 +1,26 @@
 # Servidores para multiples pruebas
+
+## Servidores disponibles
+### Envio de Logs remotos via sockets 
+En desarrollo
+
 ## Instalar ngrok
 mkdir /usr/share/ngrok
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 mv ngrok-stable-linux-amd64.zip /usr/share/ngrok
 unzip /usr/share/ngrok/ngrok-stable-linux-amd64.zip
 
-## Ver si se instalo correctamente
+### Ver si se instalo correctamente
 ./usr/share/ngrok/ngrok -h
 
-## Validar token
+### Validar token
 ./usr/share/ngrok/ngrok autotoken <TOKEN>
 
-## Lanzar ngrok in background
+### Lanzar ngrok in background
 ./usr/share/ngrok/ngrok http <PORT>
 
-
-## Obtener la dirección
+### Obtener la dirección ngrok
 curl http://localhost:4040/api/tunnels | json_reformat
+
 
 ## FIN
