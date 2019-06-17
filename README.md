@@ -22,5 +22,9 @@ unzip /usr/share/ngrok/ngrok-stable-linux-amd64.zip
 ### Obtener la dirección ngrok
 curl http://localhost:4040/api/tunnels | json_reformat
 
+### Otros
+Matar procesos por nombre.
+
+pkill -f "multiprocess_monitor_firewall_ssh.py"
 
 ## FIN
