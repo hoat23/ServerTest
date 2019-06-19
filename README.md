@@ -27,4 +27,10 @@ Matar procesos por nombre.
 
 pkill -f "multiprocess_monitor_firewall_ssh.py"
 
+### Configurar hora en un servidor
+
+timedatectl status
+timedatectl list-timezones
+timedatectl set-timezone 'America/Lima'
+
 ## FIN
