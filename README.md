@@ -33,4 +33,19 @@ timedatectl status
 timedatectl list-timezones
 timedatectl set-timezone 'America/Lima'
 
+- Configurar servidor ntp
+yum install ntp
+
+-Agregar ntp al arranque del sistema
+
+chkconfig ntp on
+
+-Iniciar servicio ntp 
+
+systemctl ntpd start 
+systemctl ntpd status
+
+
+
+
 ## FIN
