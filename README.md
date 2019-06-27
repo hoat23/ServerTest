@@ -1,5 +1,10 @@
 # Servidores para multiples pruebas
 
+## Configurar relog usando ntpdate
+Editar el crontab para q fuerce el actualizado del reloj.
+nano /etc/cronntab
+*/1 * * * *  root ntpdate pool.ntp.org
+
 ## Servidores disponibles
 ### Envio de Logs remotos via sockets 
 En desarrollo
