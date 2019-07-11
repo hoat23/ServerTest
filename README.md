@@ -4,9 +4,14 @@ https://realpython.com/python-sockets/
 
 ## Comandos de redes utiles
 Ver estado actual de los socket
-``netstat -an``
+```
+netstat -an
+```
 
-``lsof -i -n``
+```
+lsof -i -n
+```
+
 ## Configurar relog usando ntpdate
 Editar el crontab para q fuerce el actualizado del reloj.
 nano /etc/crontab
