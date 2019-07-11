@@ -1,8 +1,12 @@
 # Servidores para multiples pruebas
+## Comandos de redes utiles
+Ver estado actual de los socket
+`netstat -an`
 
+`lsof -i -n`
 ## Configurar relog usando ntpdate
 Editar el crontab para q fuerce el actualizado del reloj.
-nano /etc/cronntab
+nano /etc/crontab
 `*/1 * * * *  root ntpdate pool.ntp.org`
 
 ## Servidores disponibles
