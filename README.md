@@ -1,4 +1,7 @@
 # Servidores para multiples pruebas
+
+https://realpython.com/python-sockets/
+
 ## Comandos de redes utiles
 Ver estado actual de los socket
 `netstat -an`
