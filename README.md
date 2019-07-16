@@ -64,6 +64,8 @@ systemctl ntpd start
 systemctl ntpd status
 ```
 
-
-
+- Filtrar file logs usando grep
+ ```
+ <log> | grep -v 'input.snmp'
+```
 ## FIN
