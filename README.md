@@ -2,6 +2,10 @@
 
 https://realpython.com/python-sockets/
 
+## Obtener información del sistema operativo
+```
+hostnamectl
+```
 ## Comandos de redes utiles
 Ver estado actual de los socket
 ```
