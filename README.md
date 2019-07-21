@@ -16,7 +16,7 @@ netstat -an
 lsof -i -n
 ```
 
-## Configurar relog usando ntpdate
+## Configurar reloj usando ntpdate
 Editar el crontab para q fuerce el actualizado del reloj.
 nano /etc/crontab
 `*/1 * * * *  root ntpdate pool.ntp.org`
