@@ -11,6 +11,9 @@ Ver estado actual de los socket
 ```
 netstat -an
 ```
+```
+tcpdump -u port 9001
+```
 
 ```
 lsof -i -n
