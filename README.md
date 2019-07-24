@@ -75,4 +75,11 @@ systemctl ntpd status
  ```
  <log> | grep -v 'input.snmp'
 ```
+
+## Windows Server  - PowerShell
+### Changing Execution Policy
+```
+Set-ExecutionPolicy Unrestricted
+Get-ExecutionPolicy -List
+```
 ## FIN
