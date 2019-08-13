@@ -12,6 +12,8 @@ Ver estado actual de los socket
 netstat -an
 ```
 ```
+tcpdump --list-interfaces 
+tcpdump -i eth0 -u port 9001
 tcpdump -u port 9001
 ```
 
