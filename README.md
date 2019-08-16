@@ -84,4 +84,11 @@ systemctl ntpd status
 Set-ExecutionPolicy Unrestricted
 Get-ExecutionPolicy -List
 ```
+
+## Monitoring snmp of device
+### Instaling package to send request snmp in CentOS
+```
+yum install net-snmp-*
+```
+
 ## FIN
