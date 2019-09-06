@@ -91,4 +91,11 @@ Get-ExecutionPolicy -List
 yum install net-snmp-*
 ```
 
+### Commands 
+```
+# Pretty visualization of json
+head -1 data.json | jq
+```
+
+
 ## FIN
