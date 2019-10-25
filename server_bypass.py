@@ -1,7 +1,7 @@
 # coding: utf-8
 # Developer: Deiner Zapata Silva.
 # Date: 01/14/2019
-# Last Update: 23/10/2019
+# Last Update: 25/10/2019
 # Description: Server to show everything to received.
 # https://blog.nearsoftjobs.com/crear-un-api-y-una-aplicación-web-con-flask-6a76b8bf5383
 #########################################################################################
@@ -36,16 +36,15 @@ def print_parameters(request):
         print ( multi_dict.getlist(key) )
     print("[INFO ] printing  form data: ")
     data_form = request.form
+    print("[INFO ] printing headers: ")
     print_json( dict(request.headers) )
+    print("[INFO ] printing form: ")
     print_json( dict(request.form) )
+    print("[INFO ] printing args: ")
     print_json( dict(request.args) )
-    #for key in data_form:
-    #    print ( "{0}\t: {1}".format( key, data_form[key]  ))
-    #print("[INFO ]ending printing" )
-    #except:
-    #print("something was wrong...!!!!")
-    #finally:
-    # print("good bye") 
+    print("[INFO ] printing content: ")
+    print_json( request.json )
+    #for key in data_form:/    print ( "{0}\t: {1}".format( key, data_form[key]  ))
     return rpt
 #######################################################################################
 def req_get(URL_API, data=None, timeout=None):
@@ -91,8 +90,10 @@ def bytesELK2json(data_org,codification='utf-8'):
 @app.route('/bypass', methods=['POST'])
 def webhook_elk():
     print("[alert_elk] webhook_post()-> "+ str(sys.stdout.flush()) )
-    #print_json( bytesELK2json( request.json() ))
-    rpt = req_post(URL_NGROK, data = request.data, timeout=None)
+    data_json = request.json
+    url_bypass = data_json['metadata']['bypass']['url']
+    rpt = req_post(url_bypass, data = data_json, timeout=None)
+    #print_everything(data_json)
     return '', 200
 #######################################################################################
 @app.route('/webhook_whassapp', methods=['POST'])
