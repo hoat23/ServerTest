@@ -97,5 +97,36 @@ yum install net-snmp-*
 head -1 data.json | jq
 ```
 
+## Generate SSL certifies using OpenSSL
+
+Link with documentation: 
+- https://riptutorial.com/es/openssl/topic/2695/empezando-con-openssl
+- https://www.linux-party.com/57-seguridad/9667-generar-fichero-csr-en-linux.html
+- https://www.howtoforge.com/tutorial/how-to-install-openssl-from-source-on-linux/
+
+##### Install OpenSSL in Centos
+```
+yum install openssl openssl-devel 
+```
+##### Install OpenSSL in Centos
+
+```
+apt-get install openssl 
+```
+
+Validate version of openssl
+```
+$ openssl --version
+```
+
+### Generete certifies by mcaffe - tcp
+
+https://kc.mcafee.com/corporate/index?page=content&id=KB87927&snspd-1116&locale=es_ES&viewlocale=es_ES
+
+```
+openssl req -newkey rsa:2048 -nodes -keyout /etc/owner_certifies/syslogselfsigned.key -x509 -days 365 -out /etc/owner_certifies/syslogselfsigned.crt -config /etc/pki/tls/openssl.cnf
+```
+
+
 
 ## FIN
