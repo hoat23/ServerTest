@@ -128,5 +128,30 @@ openssl req -newkey rsa:2048 -nodes -keyout /etc/owner_certifies/syslogselfsigne
 ```
 
 
+### Updating certifies using curl 
+
+Link: https://developers.facebook.com/docs/whatsapp/guides/https
+
+```
+curl -X POST \
+  https://your-webapp-hostname:your-webapp-port/v1/certificates/external \
+  -H 'Authorization: Bearer your-auth-token' \
+  -H 'Content-Type: text/plain' \
+  --data-binary @your-path-to-certificate.pem 
+```
+For combine certifies use this command:
+```
+cat cert1.pem cert2.pem > bundle.pem
+```
+Uploading ...
+```
+curl -X POST \
+  https://your-webapp-hostname:your-webapp-port/v1/certificates/webhooks/ca \
+  -H 'Authorization: Bearer your-auth-token' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: text/plain' \
+  --data-binary @your-path-to-certificate.pem \
+  -k
+```
 
 ## FIN
