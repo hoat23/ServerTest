@@ -154,4 +154,12 @@ curl -X POST \
   -k
 ```
 
+### Plugins VSCode
+
+```
+- Encrypts
+- indent-rainbow
+- show-offset
+- Docker
+```
 ## FIN
