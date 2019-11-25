@@ -162,4 +162,17 @@ curl -X POST \
 - show-offset
 - Docker
 ```
+
+## CMD in Windows
+
+Show user SID
+
+```
+> whoami /user
+```
+
+```
+> netstat -ano
+```
+
 ## FIN
