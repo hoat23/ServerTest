@@ -166,8 +166,11 @@ curl -X POST \
 Commands added:
 
 encryptfile - encrypts the entire text in the current document
+
 encryptstr - encrypts only the text that is selected in the current document
+
 decryptfile - decrypts the entire text in the current document
+
 decryptstr - decrypts only the text that is selected in the current document
 
 ```
