@@ -6,6 +6,10 @@ https://realpython.com/python-sockets/
 ```
 hostnamectl
 ```
+si no funciona probar con 
+```
+uname -a
+```
 ## Comandos de redes utiles
 Ver estado actual de los socket
 ```
