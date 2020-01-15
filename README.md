@@ -4,11 +4,14 @@ https://realpython.com/python-sockets/
 
 ## Obtener información del sistema operativo
 ```
+cat /etc/os-release
+lsb_release -a
 hostnamectl
 ```
-si no funciona probar con 
+Ver Linux Kernel version:
 ```
 uname -a
+uname -r
 ```
 ## Comandos de redes utiles
 Ver estado actual de los socket
