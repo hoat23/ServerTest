@@ -27,6 +27,10 @@ tcpdump -u port 9001
 ```
 lsof -i -n
 ```
+## Snifear paquetes udp en un puerto   
+```
+tcpdump udp -i any port 162
+```
 
 ## Configurar reloj usando ntpdate
 Editar el crontab para q fuerce el actualizado del reloj.
