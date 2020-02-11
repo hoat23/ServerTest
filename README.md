@@ -27,7 +27,22 @@ tcpdump -u port 9001
 ```
 lsof -i -n
 ```
+
+## Abrir puertos tcp/udp
+
+```
+iptables -I INPUT -p tcp -m tcp --dport 5140 -j ACCEPT
+iptables -I INPUT -p udp -m udp --dport 5140 -j ACCEPT
+```
+
+## Validar puertos abiertos
+
+```
+netstat -tulpn | less
+```
+
 ## Snifear paquetes udp en un puerto   
+
 ```
 tcpdump udp -i any port 162
 ```
