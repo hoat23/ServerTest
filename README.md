@@ -69,7 +69,13 @@ unzip /usr/share/ngrok/ngrok-stable-linux-amd64.zip
 ### Validar token
 `./usr/share/ngrok/ngrok autotoken <TOKEN>`
 
-### Lanzar ngrok in background
+### Run ngrok
+create a bash  `run-grok.sh` file with 
+`./usr/share/ngrok/ngrok http 8080`
+run in background
+`nohup sh run-grok.sh`
+
+### Lanzar ngrok
 `./usr/share/ngrok/ngrok http <PORT>`
 
 ### Obtener la dirección ngrok
