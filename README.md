@@ -217,4 +217,12 @@ Show user SID
 > netstat -ano
 ```
 
+# Python3
+
+## Install pip3
+```bash
+sudo apt install python3-pip
+```
+
+
 ## FIN
