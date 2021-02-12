@@ -223,6 +223,16 @@ Show user SID
 ```bash
 sudo apt install python3-pip
 ```
-
-
+Validate correct instalation with:
+```
+sudo pip3 -version
+```
+Save dependences in a file
+```
+pip3 freeze > frozen-requirements.txt
+```
+Install requirements
+```
+pip3 install -r requirements.txt
+```
 ## FIN
