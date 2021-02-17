@@ -248,5 +248,7 @@ $export FLASK_APP=hello.py
 $export FLASK_ENV=development
 $flask run
 ```
+## More Documentation
+- https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-dev-start-howto-vm-python?view=azs-2008
 
 ## FIN
