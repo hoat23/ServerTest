@@ -241,4 +241,12 @@ Install requirements
 ```
 pip3 install -r requirements.txt
 ```
+# Flask
+Configurate service
+```bash
+$export FLASK_APP=hello.py
+$export FLASK_ENV=development
+$flask run
+```
+
 ## FIN
