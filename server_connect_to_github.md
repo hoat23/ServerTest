@@ -2,18 +2,24 @@
 Configurate credentials for clone a private proyect from github
 
 
-## Create Key
-creating a private an public key
+## Create and Add a Key to SSH-Agent
+Creating a private an public key
 ```bash
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
-move the key to ```~/.ssh ``` directory
+
+Move the key to ```~/.ssh ``` directory
 ```bash
 mv [file-name-rsa] ~/.ssh
 mv [file-name-rsa.pub] ~/.ssh
 ```
 
-add the key to ssh-agent
+Launch SSH-Agent in background
+```bash
+eval `ssh-agent -s`
+```
+
+Add the key to ssh-agent
 ```bash
 ssh-add ~/.ssh/[file-name-rsa]
 ssh-keygen -p -f ~/.ssh/[file-name-rsa]
@@ -23,11 +29,6 @@ ssh-keygen -p -f ~/.ssh/[file-name-rsa]
 View SSH-Agent status
 ```bash
 ssh-agent
-```
-
-Launch SSH-Agent in background
-```bash
-eval `ssh-agent -s`
 ```
 
 Forget a key after a seconds.
