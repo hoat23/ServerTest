@@ -15,8 +15,8 @@ mv [file-name-rsa.pub] ~/.ssh
 
 add the key to ssh-agent
 ```bash
-ssh-add ~/.ssh/id_ed25519
-ssh-keygen -p -f ~/.ssh/id_ed25519
+ssh-add ~/.ssh/[file-name-rsa]
+ssh-keygen -p -f ~/.ssh/[file-name-rsa]
 ```
 
 ## SSH-Agent
