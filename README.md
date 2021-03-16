@@ -263,5 +263,5 @@ $flask run
 ```
 ## More Documentation
 - https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-dev-start-howto-vm-python?view=azs-2008
-
+- https://www.linuxtechi.com/install-redis-server-on-centos-8-rhel-8/
 ## FIN
