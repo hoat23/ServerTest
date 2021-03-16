@@ -211,6 +211,13 @@ decryptstr - decrypts only the text that is selected in the current document
 - Docker
 ```
 
+### Add or change password for root
+
+In root type this commands:
+```
+sudo passwd root
+```
+
 ## CMD in Windows
 
 Show user SID
