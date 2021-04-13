@@ -254,12 +254,23 @@ pip3 install --upgrade setuptools
 pip3 install --upgrade pip
 ```
 
-# Flask
+## Flask
 Configurate service
 ```bash
 $export FLASK_APP=hello.py
 $export FLASK_ENV=development
 $flask run
+```
+## HTML Server
+
+### En Mac y Linux
+```bash
+python -m SimpleHTTPServer
+```
+### Windows
+
+```bash
+python -m http.server
 ```
 ## More Documentation
 - https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-dev-start-howto-vm-python?view=azs-2008
