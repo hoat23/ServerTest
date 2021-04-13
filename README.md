@@ -265,12 +265,12 @@ $flask run
 
 ### En Mac y Linux
 ```bash
-python -m SimpleHTTPServer
+python -m SimpleHTTPServer 8000
 ```
 ### Windows
 
 ```bash
-python -m http.server
+python -m http.serverj 8000
 ```
 ## More Documentation
 - https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-dev-start-howto-vm-python?view=azs-2008
