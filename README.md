@@ -39,6 +39,7 @@ iptables -I INPUT -p udp -m udp --dport 5140 -j ACCEPT
 
 ```
 netstat -tulpn | less
+netstat -plnt
 ```
 
 ## Snifear paquetes udp en un puerto   
