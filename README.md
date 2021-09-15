@@ -138,17 +138,18 @@ Link with documentation:
 - https://www.howtoforge.com/tutorial/how-to-install-openssl-from-source-on-linux/
 
 ##### Install OpenSSL in Centos
-```
+```bash
 yum install openssl openssl-devel 
 ```
+
 ##### Install OpenSSL in Centos
 
-```
+```bash
 apt-get install openssl 
 ```
 
 Validate version of openssl
-```
+```bash
 $ openssl --version
 ```
 
@@ -156,16 +157,15 @@ $ openssl --version
 
 https://kc.mcafee.com/corporate/index?page=content&id=KB87927&snspd-1116&locale=es_ES&viewlocale=es_ES
 
-```
+```bash
 openssl req -newkey rsa:2048 -nodes -keyout /etc/owner_certifies/syslogselfsigned.key -x509 -days 365 -out /etc/owner_certifies/syslogselfsigned.crt -config /etc/pki/tls/openssl.cnf
 ```
-
 
 ### Updating certifies using curl 
 
 Link: https://developers.facebook.com/docs/whatsapp/guides/https
 
-```
+```bash
 curl -X POST \
   https://your-webapp-hostname:your-webapp-port/v1/certificates/external \
   -H 'Authorization: Bearer your-auth-token' \
@@ -173,9 +173,10 @@ curl -X POST \
   --data-binary @your-path-to-certificate.pem 
 ```
 For combine certifies use this command:
-```
+```bash
 cat cert1.pem cert2.pem > bundle.pem
 ```
+
 Uploading ...
 ```
 curl -X POST \
@@ -185,6 +186,11 @@ curl -X POST \
   -H 'Content-Type: text/plain' \
   --data-binary @your-path-to-certificate.pem \
   -k
+```
+
+#### Generar file .pem form .cert and .key 
+```bash
+cat server.crt server.key > server.pem
 ```
 
 ### Plugins VSCode
